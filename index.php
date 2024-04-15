@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['search'])) {
     </div>
 </nav>
 
-<h1 class="col text-center text-white mt-5">Visualizza e ricerca i libri</h1>
+<h1 class="col text-center text-white mt-5">Esplora la libreria</h1>
 <div id="box"> 
   
 
