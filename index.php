@@ -75,8 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['search'])) {
         footer {
             background-color: #f8f9fa;
             padding: 20px;
-            margin-top: auto;
             text-align: center;
+            margin-top: 30px;
         }
     </style> 
     
@@ -143,14 +143,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['search'])) {
 <?php endif; ?>
 
 <h3 class="mt-5 text-white">Libri:</h3>
-<div class="row">
+<div class="row row-cols-3 g-4">
     <?php 
     // Visualizzazione di tutti i libri nel database
     $stmt = $pdo->query('SELECT * FROM libri'); 
     foreach ($stmt as $row) { ?>
-        <div class="col-md-4">
-            <div class="card mb-3 ">
-                <div class="card-body">
+        <div class="col-md-2">
+            <div class="card h-100">
+                <img src="https://img.freepik.com/free-vector/covered-opened-book-with-pages-fluttering-hand-drawn-sketch-vector-illustration_460848-14658.jpg" class="card-img-top" alt="immagine-libro" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
                     <h5 class="card-title"><?= $row['titolo'] ?></h5>
                     <p class="card-text">Autore: <?= $row['autore'] ?></p>
                     <p class="card-text">Anno Pubblicazione: <?= $row['anno_pubblicazione'] ?></p>
@@ -167,15 +168,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['search'])) {
     <?php } ?>
 </div>
 
+
+
 <!-- footer -->
 <footer>
     <p>&copy; 2024 Libreria Online. Tutti i diritti riservati.</p>
-    <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+    
 </footer>
 
 <script 

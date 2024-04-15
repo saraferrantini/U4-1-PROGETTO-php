@@ -161,12 +161,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
 <!-- footer -->
 <footer>
     <p>&copy; 2024 Libreria Online. Tutti i diritti riservati.</p>
-    <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+  
 </footer>
 
 
